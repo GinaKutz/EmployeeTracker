@@ -1,14 +1,14 @@
 /* TODO: Label selector type */
 * {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; /*not comic sans*/
   }
 
 /* TODO: Label selector type */
 body {
-  background-color: lemonchiffon;
+  background-color: lemonchiffon; /*ugly color*/
 }
 
-header,
+/* header, */
 footer {
   width: 100%;
   height: 100px;

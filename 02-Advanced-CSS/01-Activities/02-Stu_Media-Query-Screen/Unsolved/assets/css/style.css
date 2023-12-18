@@ -35,5 +35,28 @@ header {
 }
 
 /* TODO: Use media query to change the width of the cards so they split into two columns at 992px or smaller*/
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+  header {
+    background: #772014;
+    Display: flex;
+  }
+}
 
 /* TODO: Use media query to change the width of the cards so they are stacked on top of each other at 768px or smaller */
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+  nav {
+    background-color: #bb8588;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    flex-direction: column-count 2;
+  }
+
+  main {
+    max-width: 1200px;
+  }
