@@ -1,5 +1,6 @@
 // Stores user response in variable
 var tagName = prompt("Please enter an HTML Tag (ex. h1, h2, p, div):", "enter tag");
+console.log(tagName)
 
 if (tagName !== "h1" && tagName !== "h2" && tagName !== "p" && tagName !== "div") {
   alert("please enter a valid tag");

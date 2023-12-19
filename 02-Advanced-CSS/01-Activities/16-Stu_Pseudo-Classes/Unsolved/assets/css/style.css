@@ -88,11 +88,15 @@ footer {
 }
 
 /* TODO: Add styles that will hide the resource links by default */
+.resource .links
+{display: none;}
 
 
 
 /* TODO: Add styles that will display the links when the mouse hovers over the parent element */
-
+.resource: hover .link
+{display: block;
+}
 
 
 @media screen and (max-width: 768px) {

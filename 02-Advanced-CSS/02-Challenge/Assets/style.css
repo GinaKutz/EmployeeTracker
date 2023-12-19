@@ -1,0 +1,51 @@
+:root{
+    main-color: #127475;
+    secondary-color: #562c2c;
+    accent-color: #f5dfbb;
+}
+
+/* General styles */
+body {
+    background-color: var(--main-color);
+    color: var(--accent-color)
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 600px) {
+    /* Adjustments for smaller screens */
+    header {
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

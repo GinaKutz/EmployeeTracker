@@ -1,12 +1,12 @@
-// TODO: What will the following line of code log?
+//This logs the window
 console.log(window);
 
-// TODO: What will the following line of code log?
+// This logs the document that's in the window
 console.log(window.document);
 
-// TODO: What will the following line of code log?
+//This logs the root element of document
 console.log(document.documentElement);
 
-// TODO: What will the following line of code log?
+//This logs the head of the current document
 console.log(document.head);
 

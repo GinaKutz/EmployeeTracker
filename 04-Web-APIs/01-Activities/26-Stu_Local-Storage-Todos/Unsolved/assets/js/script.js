@@ -6,12 +6,15 @@ var todoCountSpan = document.querySelector("#todo-count");
 var todos = [];
 
 // TODO: What is the purpose of this function?
+//it renders the box
 function renderTodos() {
   // TODO: Describe the functionality of the following two lines of code.
+  //sets the length looks for the text
   todoList.innerHTML = "";
   todoCountSpan.textContent = todos.length;
   
   // TODO: Describe the functionality of the following `for` loop.
+  //creates the button
   for (var i = 0; i < todos.length; i++) {
     var todo = todos[i];
 
@@ -28,14 +31,18 @@ function renderTodos() {
 }
 
 // TODO: What is the purpose of the following function?
+//initialize
 function init() {
   // TODO: What is the purpose of the following line of code?
+  //parses the code (loads it)
   var storedTodos = JSON.parse(localStorage.getItem("todos"));
   // TODO: Describe the functionality of the following `if` statement.
+  //if there is storedTodos then the todos will equal storedTodos
   if (storedTodos !== null) {
     todos = storedTodos;
   }
   // TODO: Describe the purpose of the following line of code.
+  //see above rendering
   renderTodos();
 }
 
@@ -44,6 +51,7 @@ function storeTodos() {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 // TODO: Describe the purpose of the following line of code.
+
 todoForm.addEventListener("submit", function(event) {
   event.preventDefault();
   var todoText = todoInput.value.trim();

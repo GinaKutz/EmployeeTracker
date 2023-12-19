@@ -11,13 +11,19 @@
   background-color: var(--light);
 }
 
+.body {
+  font-family: 'Rubik + Bubbles', sans serif;
+  font-weight: 400;
+}
+
 .custom-navbar {
   background-color: var(--teal);
 }
 
 .custom-navbar a {
   font-size: 1.5rem;
-  color: var(--lightteal);
+  color: var(--lightteal)
+ 
 }
 
 .custom-navbar a:hover {
@@ -27,6 +33,7 @@
 .hero {
   background-color: var(--lightteal);
   color: var(--teal);
+  font-family: 'Rubik + Bubbles';
 }
 
 .custom-btn {
@@ -48,3 +55,4 @@
   background-color: var(--teal);
   color: var(--lightteal);
 }
+

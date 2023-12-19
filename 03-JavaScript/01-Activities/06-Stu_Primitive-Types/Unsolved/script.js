@@ -5,10 +5,13 @@ var four = 64.55;
 var five = "Howdy!";
 var six;
 
-// Insert comments to explain what each console log below will log to the console
+//var one is a number
 console.log(typeof one); 
+// var two is a number
 console.log(typeof two); 
+//var three is the word false
 console.log(typeof three); 
+//var four is a number
 console.log(typeof four); 
 console.log(typeof five);
 console.log(typeof six);

@@ -1,0 +1,50 @@
+:root{
+    --mediumBlue: #13293d;
+
+}
+
+header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 96%;
+    margin: 0 auto;
+    color: var(--mediumBlue);
+
+}
+
+h1{
+    font-size: 48px;
+}
+
+h3{ 
+    font-size: 32px;
+    color: var(--mediumBlue);
+
+}
+
+body{
+    background-color: cadetblue;
+    overflow-x: hidden;
+   
+}
+
+
+.card{
+    border: solid;
+    
+}
+
+.row{
+    display: flex;
+
+}
+
+@media screen and [max-width: 992px]{
+    .justify-center{
+        display: flex;
+    flex-direction: column;
+    }
+    
+}

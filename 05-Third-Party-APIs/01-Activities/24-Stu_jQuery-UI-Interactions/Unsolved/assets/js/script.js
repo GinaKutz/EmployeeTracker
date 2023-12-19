@@ -66,3 +66,8 @@ $(function () {
 
 // Add interaction here
 //
+
+
+$( function() {
+  $( "#skills-list" ).sortable();
+} );
