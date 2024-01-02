@@ -136,18 +136,11 @@ function checkWin() {
 
 // Tests if guessed letter is in word and renders it to the screen.
 function checkLetters(letter) {
-  var letterInWord = false;
   for (var i = 0; i < numBlanks; i++) {
     if (chosenWord[i] === letter) {
-      letterInWord = true;
+      blanksLetters[i] = letter;
     }
-  }
-  if (letterInWord) {
-    for (var j = 0; j < numBlanks; j++) {
-      if (chosenWord[j] === letter) {
-        blanksLetters[j] = letter;
-      }
-    }
+
     wordBlank.textContent = blanksLetters.join(" ");
   }
 }
