@@ -10,7 +10,17 @@ function getApi() {
     })
     .then(function (data) {
       // Use the console to examine the response
+    
       console.log(data);
+
+      for (var i = 0; i < data.length; i++) {
+        var userName = document.createElement('h3');
+        var userURL = document.createElement('p');
+        userName.textContent = data[i].user.login;
+        userURL.textContent = data[i].title;
+        userContainer.append(userName);
+        userContainer.append(userURL);
+      }
       // TODO: Loop through the data and generate your HTML
     });
 }

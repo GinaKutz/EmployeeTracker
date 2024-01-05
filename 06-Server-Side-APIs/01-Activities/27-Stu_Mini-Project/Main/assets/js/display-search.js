@@ -5,6 +5,24 @@ var searchFormEl = document.querySelector('#search-form');
 function getParams() {
     // Get the search params out of the URL (i.e. `?q=london&format=photo`) and convert it to an array (i.e. ['?q=london', 'format=photo'])
 
+        const urlParams = new URLSearchParams(window.location.search);
+      
+        // Convert search params to an array
+        const paramsArray = Array.from(urlParams);
+      
+        // Alternatively, get individual parameter values
+        const query = urlParams.get('q');
+        const format = urlParams.get('format');
+      
+        return { paramsArray, query, format };
+      }
+      
+      // Usage
+      const { paramsArray, query, format } = getParams();
+      console.log('Parameters Array:', paramsArray);
+      console.log('Query:', query);
+      console.log('Format:', format);
+      
     // Get the query and format values
 }
 

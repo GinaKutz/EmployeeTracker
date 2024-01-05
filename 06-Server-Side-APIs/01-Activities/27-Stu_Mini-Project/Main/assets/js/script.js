@@ -1,3 +1,5 @@
+
+
 var searchFormEl = document.querySelector('#search-form');
 
 function handleSearchFormSubmit(event) {
@@ -10,8 +12,8 @@ function handleSearchFormSubmit(event) {
         console.error('You need a search input value!');
         return;
     }
+    location.assign('/search-input')
 
-    //Set the search params in the URL (i.e. `?q=london&format=photo`)
 }
 
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);

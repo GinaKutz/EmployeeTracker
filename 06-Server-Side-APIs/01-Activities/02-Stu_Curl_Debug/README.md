@@ -6,7 +6,7 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-When the command `curl http://api.github.com` is run from the command line, the output includes the following data:
+When the command `curl https://api.github.com` is run from the command line, the output includes the following data:
 
 ```json
 {
@@ -47,13 +47,13 @@ When the command `curl http://api.github.com` is run from the command line, the 
 
 ## Actual Behavior
 
-The command `curl http://api.github.com` does not print any data to the command line.
+The command `curl https://api.github.com` does not print any data to the command line.
 
 ## Steps to Reproduce the Problem
 
 1. Open a command-line window.
 
-2. Type `curl http://api.github.com`.
+2. Type `curl https://api.github.com`.
 
 3. Press the Enter key.
 
