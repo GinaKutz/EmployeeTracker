@@ -210,3 +210,78 @@ function updateEmployeeRole() {
         name: 'employee_id',
         type: 'input',
         message: 'Enter the id
+
+        import mysql.connector
+
+# Establish connection to MySQL database
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  password="yourpassword",
+  database="yourdatabase"
+)
+
+# Function to add a department
+def add_department():
+    department_name = input("Enter the name of the department: ")
+    cursor = mydb.cursor()
+    cursor.execute("INSERT INTO departments (department_name) VALUES (%s)", (department_name,))
+    mydb.commit()
+    print("Department added successfully!")
+
+# Function to add a role
+def add_role():
+    title = input("Enter the name of the role: ")
+    salary = float(input("Enter the salary for the role: "))
+    department_id = int(input("Enter the department ID for the role: "))
+    cursor = mydb.cursor()
+    cursor.execute("INSERT INTO roles (title, salary, department_id) VALUES (%s, %s, %s)", (title, salary, department_id))
+    mydb.commit()
+    print("Role added successfully!")
+
+# Function to add an employee
+def add_employee():
+    first_name = input("Enter the employee's first name: ")
+    last_name = input("Enter the employee's last name: ")
+    role_id = int(input("Enter the role ID for the employee: "))
+    manager_id = int(input("Enter the manager ID for the employee: "))
+    cursor = mydb.cursor()
+    cursor.execute("INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES (%s, %s, %s, %s)", (first_name, last_name, role_id, manager_id))
+    mydb.commit()
+    print("Employee added successfully!")
+
+# Function to update an employee role
+def update_employee_role():
+    employee_id = int(input("Enter the employee ID to update: "))
+    new_role_id = int(input("Enter the new role ID for the employee: "))
+    cursor = mydb.cursor()
+    cursor.execute("UPDATE employees SET role_id = %s WHERE employee_id = %s", (new_role_id, employee_id))
+    mydb.commit()
+    print("Employee role updated successfully!")
+
+# Main function
+def main():
+    while True:
+        print("\nChoose an option:")
+        print("1. Add a department")
+        print("2. Add a role")
+        print("3. Add an employee")
+        print("4. Update an employee role")
+        print("5. Exit")
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            add_department()
+        elif choice == "2":
+            add_role()
+        elif choice == "3":
+            add_employee()
+        elif choice == "4":
+            update_employee_role()
+        elif choice == "5":
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
+
